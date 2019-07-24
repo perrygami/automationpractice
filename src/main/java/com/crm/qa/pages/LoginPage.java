@@ -11,8 +11,8 @@ import com.crm.qa.base.TestBase;
 public class LoginPage extends TestBase {
 	
 	//Page Factory
-	@FindBy(name="email")
-	WebElement email;
+	@FindBy(name="username")
+	WebElement username;
 	
 	@FindBy(name="password")
 	WebElement password;
@@ -35,11 +35,12 @@ public class LoginPage extends TestBase {
 		return title;
 		}
 	
-	public HomePage Login(String mail,String pwd) {
-		email.sendKeys(mail);
+	public HomePage Login(String uname,String pwd) {
+		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		Login.click();
 		
 		return new HomePage();
 	}
+	
 }
