@@ -31,30 +31,47 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">0.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">0</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">0</td><td class="numi">7.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Default test &#8212; failed (configuration methods)</th></tr>
-<tr class="failedodd"><td rowspan="1">com.crm.qa.testcases.HomePageTest</td><td><a href="#m1"><b>setup</b>  </a></td><td class="numi">1</td><td>1563965750800</td><td class="numi">0</td></tr>
+<tr class="failedodd"><td rowspan="1">com.crm.qa.testcases.HomePageTest</td><td><a href="#m1"><b>setup</b>  </a></td><td class="numi">1</td><td>1563974778718</td><td class="numi">0</td></tr>
 <tr><th colspan="4">Default test &#8212; skipped (configuration methods)</th></tr>
-<tr class="skippedodd"><td rowspan="1">com.crm.qa.testcases.HomePageTest</td><td><a href="#m2"><b>teardown</b>  </a></td><td class="numi">1</td><td>1563965750938</td><td class="numi">0</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.crm.qa.testcases.HomePageTest</td><td><a href="#m2"><b>teardown</b>  </a></td><td class="numi">1</td><td>1563974785930</td><td class="numi">0</td></tr>
 <tr><th colspan="4">Default test &#8212; skipped</th></tr>
-<tr class="skippedodd"><td rowspan="1">com.crm.qa.testcases.HomePageTest</td><td><a href="#m3"><b>VerifyUsernameTest</b>  </a></td><td class="numi">1</td><td>1563965750934</td><td class="numi">2</td></tr>
+<tr class="skippedodd"><td rowspan="1">com.crm.qa.testcases.HomePageTest</td><td><a href="#m3"><b>VerifyUsernameTest</b>  </a></td><td class="numi">1</td><td>1563974785928</td><td class="numi">1</td></tr>
 </table>
 <h1>Default test</h1>
 <h2 id="m1">com.crm.qa.testcases.HomePageTest:setup</h2>
 <div style="padding-left:3em">
-<p>The path to the driver executable must be set by the webdriver.chrome.driver system property; for more information, see https://github.com/SeleniumHQ/selenium/wiki/ChromeDriver. The latest version can be downloaded from http://chromedriver.storage.googleapis.com/index.html</p>
-com.google.common.base.Preconditions.checkState(Preconditions.java:847)
-<br/>at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
-<br/>at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:35)
-<br/>at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:159)
-<br/>at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
-<br/>at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:94)
-<br/>at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:123)
-<br/>at com.crm.qa.base.TestBase.init(TestBase.java:39)
-<br/>at com.crm.qa.testcases.HomePageTest.setup(HomePageTest.java:24)
+<p>element click intercepted: Element &lt;input type=&quot;submit&quot; value=&quot;Login&quot; class=&quot;btn btn-small&quot;&gt; is not clickable at point (1460, 117). Other element would receive the click: &lt;div id=&quot;preloader&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=75.0.3770.142)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;PerryG.local&apos;, ip: &apos;fe80:0:0:0:1429:a5ec:74c3:b865%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.6&apos;, java.version: &apos;11.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 75.0.3770.142, chrome: {chromedriverVersion: 75.0.3770.140 (2d9f97485c7b..., userDataDir: /var/folders/_b/ztl7v0w10p7...}, goog:chromeOptions: {debuggerAddress: localhost:55483}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 0155f2d27e506d79e1b16396b48c01e8</p>
+java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+<br/>at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+<br/>at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+<br/>at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+<br/>at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+<br/>at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+<br/>at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+<br/>at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+<br/>at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+<br/>at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+<br/>at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+<br/>at com.sun.proxy.$Proxy12.click(Unknown Source)
+<br/>at com.crm.qa.pages.LoginPage.Login(LoginPage.java:40)
+<br/>at com.crm.qa.testcases.HomePageTest.setup(HomePageTest.java:26)
 <br/>27 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>

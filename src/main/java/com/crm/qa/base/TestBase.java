@@ -13,36 +13,36 @@ public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	
+
 	public TestBase() {
-		
+
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(System.getProperty("user.dir") + "/Users/perry.gami/Documents/GitHub/automationpractice/src/main/java/com/crm/qa/config/config.properties");
+			System.out.println("Path to Config file: " + System.getProperty("user.dir")
+					+ "/src/main/java/com/crm/qa/config/config.properties");
+			FileInputStream ip = new FileInputStream(
+					System.getProperty("user.dir") + "/src/main/java/com/crm/qa/config/config.properties");
 			try {
 				prop.load(ip);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-			
-		}catch(FileNotFoundException e) {
-			
+
+		} catch (FileNotFoundException e) {
+
 			e.printStackTrace();
-			
+
 		}
 	}
-	
+
 	public static void init() {
-		
-		System.setProperty("webdriver.driver.chrome", "/Users/perry.gami/Documents/Eclipse/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "/Users/perry.gami/Documents/GitHub/chromedriver");
 		driver = new ChromeDriver();
-		
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(20,TimeUnit.SECONDS);
+		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
 	}
-	
-	
+
 }

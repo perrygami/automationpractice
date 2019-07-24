@@ -9,38 +9,37 @@ import org.openqa.selenium.support.PageFactory;
 import com.crm.qa.base.TestBase;
 
 public class LoginPage extends TestBase {
-	
-	//Page Factory
-	@FindBy(name="username")
+
+	// Page Factory
+	@FindBy(name = "username")
 	WebElement username;
-	
-	@FindBy(name="password")
+
+	@FindBy(name = "password")
 	WebElement password;
-	
-	@FindBy(xpath="//*[@id=\"ui\"]/div/div/form/div/div[4]")
+
+	@FindBy(xpath = "//input[@type='submit']")
 	WebElement Login;
 
-	//PageFactory Intilization 
+	// PageFactory Intilization
 	public LoginPage() {
-		
-		PageFactory.initElements(driver,this);
-		
-		}
-	
-	
-	//Actions
-	
+
+		PageFactory.initElements(driver, this);
+
+	}
+
+	// Actions
+
 	public String validatePageName() {
 		String title = driver.getTitle();
 		return title;
-		}
-	
-	public HomePage Login(String uname,String pwd) {
+	}
+
+	public HomePage Login(String uname, String pwd) {
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
 		Login.click();
-		
+
 		return new HomePage();
 	}
-	
+
 }

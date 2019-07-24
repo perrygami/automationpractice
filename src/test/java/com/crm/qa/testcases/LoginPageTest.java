@@ -14,29 +14,27 @@ public class LoginPageTest extends TestBase {
 	
 	LoginPage loginPage;
 	HomePage homePage;
+	
 	@BeforeMethod
 	public void setup() {
-		
 		init();
-		
 	}
 	
 	@Test
 	public void LoginPagetileTest() {
+		loginPage = new LoginPage();
 		String title = loginPage.validatePageName();
-		Assert.assertEquals(title, "CRMPRO  - CRM software for customer relationship management, sales, and support.");
-		
-		
+		Assert.assertEquals(title,"CRMPRO  - CRM software for customer relationship management, sales, and support.");
 	}
 	@Test
-	public void LoginTest() {
-		
+	public void LoginTest() throws InterruptedException {
+		Thread.sleep(1000);
 		homePage = loginPage.Login(prop.getProperty("username"),prop.getProperty("password"));
 	}
 
-	@AfterMethod
+	/*@AfterMethod
 	public void Teardown() {
+		driver.close();
 		
-		driver.quit();
-	}
+	}*/
 }
