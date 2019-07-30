@@ -34,9 +34,10 @@ public class LoginPage extends TestBase {
 		return title;
 	}
 
-	public HomePage Login(String uname, String pwd) {
+	public HomePage Login(String uname, String pwd) throws InterruptedException {
 		username.sendKeys(uname);
 		password.sendKeys(pwd);
+		Thread.sleep(1000);
 		Login.click();
 
 		return new HomePage();

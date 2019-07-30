@@ -22,7 +22,7 @@ public ContactPageTest() {
 
 
 @BeforeMethod
-public void setup() {
+public void setup() throws InterruptedException {
 	
 	init();
 	loginpage = new LoginPage();
@@ -30,5 +30,5 @@ public void setup() {
 	
 }
 
-	@Test
+
 }
