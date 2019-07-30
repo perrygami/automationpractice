@@ -35,7 +35,6 @@ public class ContactPage extends TestBase {
 	}
 
 	
-	// commit by tapan on contact screen on new branch
 	public boolean verifyContactLable() {
 		return ContactLable.isDisplayed();
 

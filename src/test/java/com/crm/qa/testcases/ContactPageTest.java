@@ -1,5 +1,6 @@
 package com.crm.qa.testcases;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -28,25 +29,33 @@ public class ContactPageTest extends TestBase {
 	public void setup() throws InterruptedException {
 
 		init();
+		testutil = new TestUtil();
 		loginpage = new LoginPage();
 		homepage = loginpage.Login(prop.getProperty("username"), prop.getProperty("password"));
-		testutil = new TestUtil();
+		
 		contactpage = new ContactPage();
 		testutil.SwitchToFrame();
 		contactpage = homepage.Contacts();
+		homepage.clickonNewContactLink();
+	}
+
+	@Test(priority = 2)
+	public void VerifyUsernameTest() {
+		System.out.println("test");
 	}
 
 	@DataProvider
-	public Object[][] getTestData() {
-		Object data[][]=TestUtil.getTestData(sheetname);
+	public Object[][] getCRMTestData(){
+		Object data[][] = TestUtil.getTestData(sheetname);
 		return data;
-		
-	}
-	@Test(dataProvider = "getTestData")
-	public void TestCreateNewContact(String title,String firstname,String Lastname,String company) {
-		homepage.clickonNewContactLink();
-		contactpage.createNewContact(title,firstname,Lastname,company);
-
 	}
 
-}//commit test done by perry
+	@Test(priority = 1 ,dataProvider="getCRMTestData")
+	public void TestCreateNewContact(String title,String firstname,String Lastname,String
+	  company) 
+	{ //homepage.clickonNewContactLink();
+	  contactpage.createNewContact(title,firstname,Lastname,company);
+	  
+	  }
+
+}// commit test done by perry
