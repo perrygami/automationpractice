@@ -37,8 +37,8 @@ public class ContactPageTest extends TestBase {
 	@Test
 	public void TestCreateNewContact() {
 		homepage.clickonNewContactLink();
-		contactpage.createNewContact("Miss","Kelly","Jonas", "Test");
+		contactpage.createNewContact("Miss", "Kelly", "Jonas", "Test");
 
 	}
 
-}//commit test done by perry
+}
