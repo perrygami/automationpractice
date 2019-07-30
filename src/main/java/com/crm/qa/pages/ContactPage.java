@@ -24,7 +24,7 @@ public class ContactPage extends TestBase {
 	@FindBy(name = "client_lookup")
 	WebElement Company;
 
-	@FindBy(xpath = "//input[@type='submit and @value='Save']")
+	@FindBy(xpath = "/html/body/table[2]/tbody/tr[1]/td[2]/table/tbody/tr/td/fieldset/form/table/tbody/tr[1]/td/input[2]")
 	WebElement Save;
 
 	// PageFactory Intilization
