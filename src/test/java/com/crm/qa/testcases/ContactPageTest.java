@@ -1,6 +1,7 @@
 package com.crm.qa.testcases;
 
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.crm.qa.Util.TestUtil;
@@ -15,6 +16,7 @@ public class ContactPageTest extends TestBase {
 	LoginPage loginpage;
 	TestUtil testutil;
 	ContactPage contactpage;
+	String sheetname = "contact";
 
 	public ContactPageTest() {
 
@@ -34,10 +36,16 @@ public class ContactPageTest extends TestBase {
 		contactpage = homepage.Contacts();
 	}
 
-	@Test
-	public void TestCreateNewContact() {
+	@DataProvider
+	public Object[][] getTestData() {
+		Object data[][]=TestUtil.getTestData(sheetname);
+		return data;
+		
+	}
+	@Test(dataProvider = "getTestData")
+	public void TestCreateNewContact(String title,String firstname,String Lastname,String company) {
 		homepage.clickonNewContactLink();
-		contactpage.createNewContact("Miss","Kelly","Jonas", "Test");
+		contactpage.createNewContact(title,firstname,Lastname,company);
 
 	}
 

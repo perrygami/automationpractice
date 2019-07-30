@@ -5,7 +5,6 @@
     <classes>
       <class name="com.crm.qa.testcases.ContactPageTest">
         <methods>
-          <include name="setup"/>
           <include name="TestCreateNewContact"/>
         </methods>
       </class> <!-- com.crm.qa.testcases.ContactPageTest -->
