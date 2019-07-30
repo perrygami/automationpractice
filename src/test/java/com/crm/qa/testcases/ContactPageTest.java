@@ -14,7 +14,12 @@ public ContactPageTest() {
 		
 		super();
 		
-	}
+	}  
+
+
+
+
+
 
 @BeforeMethod
 public void setup() {
