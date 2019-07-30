@@ -9,10 +9,9 @@ import org.openqa.selenium.support.ui.Select;
 import com.crm.qa.base.TestBase;
 
 public class ContactPage extends TestBase {
-	
-	
-	//PAGE FACTORY
-	
+
+	// PAGE FACTORY
+
 	@FindBy(xpath = "/html/body/table[1]/tbody/tr[3]/td[1]/div/div/ul/li[4]/a")
 	WebElement ContactLable;
 
@@ -21,31 +20,27 @@ public class ContactPage extends TestBase {
 
 	@FindBy(id = "surname")
 	WebElement LastName;
-	
-	@FindBy(id = "client_lookup")
+
+	@FindBy(name = "client_lookup")
 	WebElement Company;
-	
-	@FindBy(xpath = "@FindBy(id = \"client_lookup\")\n" + 
-			"	WebElement Company;")
+
+	@FindBy(xpath = "//input[@type='submit and @value='Save']")
 	WebElement Save;
-	
-	
-	
-	//PageFactory Intilization 
-			public ContactPage() {
-				
-				PageFactory.initElements(driver,this);
-				
-				}
-			
-	public boolean verifyContactLable()
-	{
-		return ContactLable.isDisplayed();
-		
+
+	// PageFactory Intilization
+	public ContactPage() {
+
+		PageFactory.initElements(driver, this);
+
 	}
-	
-	public void createNewContact(String title,String fname,String Lname,String cmpny) {
-		
+
+	public boolean verifyContactLable() {
+		return ContactLable.isDisplayed();
+
+	}
+
+	public  void createNewContact(String title, String fname, String Lname, String cmpny) {
+
 		Select select = new Select(driver.findElement(By.name("title")));
 		select.selectByVisibleText(title);
 		FirstName.sendKeys(fname);
@@ -53,6 +48,6 @@ public class ContactPage extends TestBase {
 		Company.sendKeys(cmpny);
 		Save.click();
 		
-		
+
 	}
 }
