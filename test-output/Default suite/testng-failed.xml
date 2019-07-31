@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.ContactPageTest">
+      <class name="com.crm.qa.testcases.LoginPageTest">
         <methods>
           <include name="setup"/>
-          <include name="TestCreateNewContact"/>
+          <include name="LoginPagetileTest"/>
+          <include name="LoginTest"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.ContactPageTest -->
+      </class> <!-- com.crm.qa.testcases.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
