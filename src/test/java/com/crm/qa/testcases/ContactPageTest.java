@@ -1,7 +1,5 @@
 package com.crm.qa.testcases;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -35,7 +33,7 @@ public class ContactPageTest extends TestBase {
 		homepage = loginpage.Login(prop.getProperty("username"), prop.getProperty("password"));
 
 		testutil.SwitchToFrame();
-		
+
 	}
 
 	/*
